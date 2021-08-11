@@ -1,0 +1,3 @@
+[submodule "Django"]
+	path = Django
+	url = https://github.com/Durgavasu58/Djnago_Crud-Search.git

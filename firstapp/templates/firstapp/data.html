@@ -1,0 +1,21 @@
+  {% extends 'firstapp/base.html' %}
+  {% load static %}
+      {% block content %}
+         
+      {% for form in datas %}
+              <h3 class="text-danger">Name: <span class="text-success">{{ form.name }}</span></h3>
+              <h3 class="text-danger">Email:  <span class="text-success">{{ form.email }}</span></h3>
+              <h3 class="text-danger">Date of Birth:  <span class="text-success">{{ form.dob }}</span></h3>
+              <h3 class="text-danger"> Age:  <span class="text-success">{{ form.age }}</span></h3>
+              <h3 class="text-danger">Phone number : <span class="text-success">{{ form.phone }}</span></h3>
+              <a href="{% url 'firstapp:home' %}" class="btn btn-secondary mt-3">Go to Form Page</a>
+              <a href="{% url 'firstapp:search' %}" class="btn btn-secondary mt-3">Go to Search Page</a>
+              <hr><hr>
+          {% endfor %}
+
+      {% endblock %}
+  
+        
+    </div>
+ <span></span>
+</html>

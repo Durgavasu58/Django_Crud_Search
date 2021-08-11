@@ -1,0 +1,30 @@
+
+  {% extends 'firstapp/base.html' %}
+  {% load crispy_forms_tags %}
+  {% load static %}
+
+     {% block content %}
+     
+     <!-- <form method="get" class="form-inline my-2 my-lg-0">
+      {% csrf_token %}
+        <input  type="text" name="q" placeholder="Search..." class="form-control mr-sm-2">
+        <button class="btn btn btn-outline-info my-2 my-sm-0" type="submit"> Search </button>
+ -->
+    </form>
+      {% for Data in results %}
+        <h3>{{Data.name}}</h3>
+        <h3>{{Data.email}}</h3>
+        <h3>{{Data.dob}}</h3>
+        <h3>{{Data.age}}</h3>
+        <h3>{{Data.phone}}</h3>
+      {% empty %}
+        <h2>No results found</h2>
+      {% endfor %}
+      <a href="{% url 'firstapp:data' %}" class="btn btn-secondary">Check the data</a>
+
+
+    {% endblock %}
+
+
+
+
